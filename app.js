@@ -12,6 +12,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 
+app.get('/', function (req, res, next) {
+  res.send('Hi!')
+})
 app.group('/api', (router) => {
   router.group('/v1', (router) => {
     router.use('/', v1)
