@@ -18,4 +18,9 @@ app.get('/', function (req, res, next) {
 // Router V1
 app.use('/api', v1)
 
+const PORT = process.env.PORT || 8080
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}...`)
+})
+
 module.exports = app
