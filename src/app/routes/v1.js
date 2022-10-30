@@ -3,10 +3,10 @@ require('express-group-routes')
 var router = express.Router()
 
 // V1 Register
-const heatlhRoutes = require('./health')
+const healthRoutes = require('./health')
 
 router.group('/', (router) => {
-  router.use('/health', heatlhRoutes)
+  router.use('/health', healthRoutes)
 })
 
 module.exports = router
