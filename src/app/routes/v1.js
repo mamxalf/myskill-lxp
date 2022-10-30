@@ -1,12 +1,11 @@
 var express = require('express')
-require('express-group-routes')
-var router = express.Router()
+var router = express.Router({ mergeParams: true })
 
 // V1 Register
 const healthRoutes = require('./health')
+const pingRoutes = require('./ping')
 
-router.group('/', (router) => {
-  router.use('/health', healthRoutes)
-})
+router.use('/health', healthRoutes)
+router.use('/ping', pingRoutes)
 
 module.exports = router
