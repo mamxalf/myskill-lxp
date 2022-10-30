@@ -3,7 +3,7 @@ require('express-group-routes')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 
-const { heatlhRoutes } = require('./src/app/routes')
+const v1 = require('./src/app/routes/v1')
 
 const app = express()
 
@@ -13,8 +13,8 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 
 app.group('/api', (router) => {
-  router.group('/health', (health) => {
-    health.use('/', heatlhRoutes)
+  router.group('/v1', (router) => {
+    router.use('/', v1)
   })
 })
 
