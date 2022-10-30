@@ -1,5 +1,4 @@
 const express = require('express')
-require('express-group-routes')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 
