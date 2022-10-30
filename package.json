@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon ./bin/www"
+    "dev": "nodemon server.js"
   },
   "engines": {
     "node": "16.x.x"
