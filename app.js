@@ -1,22 +1,22 @@
 const express = require('express')
-const cookieParser = require('cookie-parser')
-const logger = require('morgan')
+// const cookieParser = require('cookie-parser')
+// const logger = require('morgan')
 
 const v1 = require('./src/app/routes/v1')
 
 const app = express()
 
-app.use(logger('dev'))
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
-app.use(cookieParser())
+// app.use(logger('dev'))
+// app.use(express.json())
+// app.use(express.urlencoded({ extended: false }))
+// app.use(cookieParser())
 
-app.get('/', function (req, res, next) {
+app.get('/', (req, res) => {
   res.send('Hi!')
 })
 
 // Router V1
-app.use('/api', v1)
+// app.use('/api', v1)
 
 const PORT = process.env.PORT || 8080
 app.listen(PORT, () => {
