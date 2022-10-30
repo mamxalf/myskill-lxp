@@ -2,7 +2,7 @@
   "name": "myskill-lxp",
   "version": "0.0.0",
   "private": true,
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www"
@@ -27,7 +27,7 @@
     "test": {
       "app": {
         "args": [
-          "app.js"
+          "server.js"
         ],
         "msg": "Hello from App Engine!"
       }
