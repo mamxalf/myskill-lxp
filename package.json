@@ -2,9 +2,13 @@
   "name": "myskill-lxp",
   "version": "0.0.0",
   "private": true,
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon ./bin/www"
+  },
+  "engines": {
+    "node": "16.x.x"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
