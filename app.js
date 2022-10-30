@@ -16,6 +16,6 @@ app.get('/', function (req, res, next) {
 })
 
 // Router V1
-app.use('/v1', v1)
+app.use('/api', v1)
 
 module.exports = app
